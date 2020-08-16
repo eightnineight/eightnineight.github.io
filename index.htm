@@ -3,6 +3,24 @@
   <head>
     <meta charset="utf-8">
     <title>test</title>
+    <style>
+      .media {
+        width: 100vw;
+        height: 300px;
+      }
+      
+      @media screen and (max-width: 700px) {
+        .media {
+          background-color: red;
+        }
+      }
+      
+      @media screen and (min-width: 701px) {
+        .media {
+          background-color: green;
+        }
+      }
+    </style>
   </head>
   <body>
     <h1>test</h1>
