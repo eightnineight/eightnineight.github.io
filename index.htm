@@ -9,7 +9,8 @@
     </style>
   </head>
   <body>
-    <h1>test 23</h1>
+    <h1>test 24</h1>
+    <button id='oauth'>OAuth</button>
       
       <script>
     window.fbAsyncInit = function() {
@@ -25,39 +26,24 @@
         console.log('view');
     };
   
-    // (function(d, s, id){
-    //    var js, fjs = d.getElementsByTagName(s)[0];
-    //    if (d.getElementById(id)) {return;}
-    //    js = d.createElement(s); js.id = id;
-    //    js.src = "https://connect.facebook.net/en_US/sdk.js";
-    //    fjs.parentNode.insertBefore(js, fjs);
-    //  }(document, 'script', 'facebook-jssdk'));
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
   </script>
     
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script> -->
      <script>
-        console.log('=============');
-        setTimeout(() => {
+        let btn = document.getElementById('oauth');
+        btn.addEventListener('click', ()=> {
+            console.log('click');
             FB.login(function (response) {
                 console.log('log: ', response);
-
-                console.log('===== status');
-                setTimeout(() => {
-                    FB.getLoginStatus(function (response) {
-                        console.log(response);
-                    });
-                    console.log('status end');
-                }, 2000);
             });
-        }, 2000);
-        console.log('login end');
-       
-       setTimeout(() => {
-                    FB.getLoginStatus(function (response) {
-                        console.log(response);
-                    });
-                    console.log('status end');
-                }, 10000);
+        } )
     </script>
   </body>
 </html>
