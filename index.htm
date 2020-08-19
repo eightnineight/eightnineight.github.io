@@ -24,6 +24,54 @@
   <body>
     <h1>test13</h1>
     <div class="media"><div>
+      
+      <script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '811216246082206',
+        // cookie     : true,
+        xfbml      : true,
+        autoLogAppEvents: true,
+        version    : 'v8.0'
+      });
+        
+      FB.AppEvents.logPageView();   
+        
+    };
+  
+    // (function(d, s, id){
+    //    var js, fjs = d.getElementsByTagName(s)[0];
+    //    if (d.getElementById(id)) {return;}
+    //    js = d.createElement(s); js.id = id;
+    //    js.src = "https://connect.facebook.net/en_US/sdk.js";
+    //    fjs.parentNode.insertBefore(js, fjs);
+    //  }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+<!-- <script>
+    window.fbAsyncInit = function () {
+        FB.init({
+            appId: '811216246082206',
+            autoLogAppEvents: true,
+            xfbml: true,
+            version: 'v8.0'
+        });
+    };
+    console.log('oauth');
+</script> -->
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
+<script>
+//     FB.ui({
+//   method: 'share',
+//   href: 'https://developers.facebook.com/docs/'
+// }, function(response){});
+setTimeout(() => {
+FB.getLoginStatus(function(response) {
+    console.log(response);
+});
+cosnole.log('login');
+}, 2000);
+</script>
   </body>
 </html>
 
