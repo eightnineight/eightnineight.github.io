@@ -9,7 +9,7 @@
     </style>
   </head>
   <body>
-    <h1>test 20</h1>
+    <h1>test 21</h1>
       
       <script>
     window.fbAsyncInit = function() {
@@ -41,20 +41,27 @@
         //   href: 'https://developers.facebook.com/docs/'
         // }, function(response){});
         console.log('=============');
-        setTimeout(() => {
-            FB.login(function (response) {
-                console.log('log: ', response);
+//         setTimeout(() => {
+//             FB.login(function (response) {
+//                 console.log('log: ', response);
 
-                console.log('===== status');
-                setTimeout(() => {
+//                 console.log('===== status');
+//                 setTimeout(() => {
+//                     FB.getLoginStatus(function (response) {
+//                         console.log(response);
+//                     });
+//                     console.log('status end');
+//                 }, 2000);
+//             });
+//         }, 2000);
+//         console.log('login end');
+       
+       setTimeout(() => {
                     FB.getLoginStatus(function (response) {
                         console.log(response);
                     });
                     console.log('status end');
-                }, 2000);
-            });
-        }, 2000);
-        console.log('login end');
+                }, 3000);
     </script>
   </body>
 </html>
