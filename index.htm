@@ -5,25 +5,11 @@
     <title>test</title>
     <meta name="viewport" content="width=device-width; initial-scale=1.0;">
     <style>
-      .media {
-        width: 100vw;
-        height: 400px;
-      }
-      
-      .media {
-        border: 1px red solid;
-      }
-      
-      @media screen and (min-width: 400px) {
-        .media {
-          background-color: green;
-        }
-      }
+     
     </style>
   </head>
   <body>
-    <h1>test17</h1>
-    <div class="media"><div>
+    <h1>test18</h1>
       
       <script>
     window.fbAsyncInit = function() {
@@ -60,27 +46,27 @@
     console.log('oauth');
 </script> -->
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
-<script>
-//     FB.ui({
-//   method: 'share',
-//   href: 'https://developers.facebook.com/docs/'
-// }, function(response){});
-  console.log('=============');
-  setTimeout(() => {
-  FB.login(function(response){
-  console.log('log: ', response);
-});
-  }, 2000);
-  console.log('login end');
-  
-  console.log('===== status');
-setTimeout(() => {
-FB.getLoginStatus(function(response) {
-    console.log(response);
-});
-console.log('status end');
-}, 10000);
-</script>
+     <script>
+        //     FB.ui({
+        //   method: 'share',
+        //   href: 'https://developers.facebook.com/docs/'
+        // }, function(response){});
+        console.log('=============');
+        setTimeout(() => {
+            FB.login(function (response) {
+                console.log('log: ', response);
+
+                console.log('===== status');
+                setTimeout(() => {
+                    FB.getLoginStatus(function (response) {
+                        console.log(response);
+                    });
+                    console.log('status end');
+                }, 2000);
+            });
+        }, 2000);
+        console.log('login end');
+    </script>
   </body>
 </html>
 
