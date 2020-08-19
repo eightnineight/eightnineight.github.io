@@ -9,7 +9,7 @@
     </style>
   </head>
   <body>
-    <h1>test 22</h1>
+    <h1>test 23</h1>
       
       <script>
     window.fbAsyncInit = function() {
@@ -36,32 +36,28 @@
     
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js"></script>
      <script>
-        //     FB.ui({
-        //   method: 'share',
-        //   href: 'https://developers.facebook.com/docs/'
-        // }, function(response){});
         console.log('=============');
-//         setTimeout(() => {
-//             FB.login(function (response) {
-//                 console.log('log: ', response);
+        setTimeout(() => {
+            FB.login(function (response) {
+                console.log('log: ', response);
 
-//                 console.log('===== status');
-//                 setTimeout(() => {
-//                     FB.getLoginStatus(function (response) {
-//                         console.log(response);
-//                     });
-//                     console.log('status end');
-//                 }, 2000);
-//             });
-//         }, 2000);
-//         console.log('login end');
+                console.log('===== status');
+                setTimeout(() => {
+                    FB.getLoginStatus(function (response) {
+                        console.log(response);
+                    });
+                    console.log('status end');
+                }, 2000);
+            });
+        }, 2000);
+        console.log('login end');
        
        setTimeout(() => {
                     FB.getLoginStatus(function (response) {
                         console.log(response);
                     });
                     console.log('status end');
-                }, 3000);
+                }, 10000);
     </script>
   </body>
 </html>
