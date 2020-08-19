@@ -22,7 +22,7 @@
     </style>
   </head>
   <body>
-    <h1>test15</h1>
+    <h1>test16</h1>
     <div class="media"><div>
       
       <script>
@@ -66,12 +66,20 @@
 //   href: 'https://developers.facebook.com/docs/'
 // }, function(response){});
   console.log('=============');
+  setTimeout(() => {
+  FB.login(function(response){
+  // handle the response 
+});
+  }, 2000);
+  console.log('login end');
+  
+  console.log('===== status');
 setTimeout(() => {
 FB.getLoginStatus(function(response) {
     console.log(response);
 });
-console.log('login');
-}, 2000);
+console.log('status end');
+}, 10000);
 </script>
   </body>
 </html>
